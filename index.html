@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Expenses chart component" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Expenses chart component</title>
+  </head>
+  <body>
+    <div class="popup-wrapper">
+      <section class="my-balance">
+        <div class="balance-left">
+          <p>My balance</p>
+          <h2>$921.48</h2>
+        </div>
+        <div class="balance-right">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="spending">
+        <div class="spending-top">
+          <h2>Spending - Last 7 days</h2>
+
+          <!-- Chart container -->
+          <div class="chart-container">
+            <figure class="day">
+              <div class="bar" id="mon"></div>
+              <figcaption>mon</figcaption>
+            </figure>
+
+            <figure class="day">
+              <div class="bar" id="tue"></div>
+              <figcaption>tue</figcaption>
+            </figure>
+            <figure class="day">
+              <div class="bar" id="wed"></div>
+              <figcaption>wed</figcaption>
+            </figure>
+            <figure class="day">
+              <div class="bar" id="thu"></div>
+              <figcaption>thu</figcaption>
+            </figure>
+            <figure class="day">
+              <div class="bar" id="fri"></div>
+              <figcaption>fri</figcaption>
+            </figure>
+            <figure class="day">
+              <div class="bar" id="sat"></div>
+              <figcaption>sat</figcaption>
+            </figure>
+            <figure class="day">
+              <div class="bar" id="sun"></div>
+              <figcaption>sun</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="spending-bottom">
+          <div class="spending-bottom-left">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
+          </div>
+          <div class="spending-bottom-right">
+            <p class="p-dark">+2.4%</p>
+            <p class="p-light">from last month</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

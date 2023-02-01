@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap')
+
+$Softred: hsl(10, 79%, 65%)
+$Cyan: hsl(186, 34%, 60%)
+$Darkbrown: hsl(25, 47%, 15%)
+$Mediumbrown: hsl(28, 10%, 53%)
+$Cream: hsl(27, 66%, 92%)
+$Verypaleorange: #F8E9DD
+$Cardwhite: #FFFBF6
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'DM Sans', sans-serif  
+    font-size: 18px
+    background-color: $Verypaleorange
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+
+h1
+    font-size: 48px
+h2
+    font-size: 32px    
+
+.my-balance
+    background-color: $Softred
+    border-radius: 20px
+    padding: 25px 32px
+    color: #FFFBF6
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 24px
+    p
+        margin-bottom: 8px
+
+.spending
+    background-color: $Cardwhite
+    border-radius: 20px
+    padding: 25px 32px
+    h2
+        margin-bottom: 66px
+.spending-top
+    border-bottom: 2px solid $Verypaleorange        
+    margin-bottom: 32px
+
+//  Chart section
+.chart-container
+    display: grid
+    grid-template-columns: repeat(7, 1fr)
+    gap: 18px
+    margin-bottom: 32px
+    height: 150px
+.day
+    display: flex
+    flex-direction: column    
+    justify-content: flex-end
+.bar
+    background-color: $Softred
+    width: 100%
+    border-radius: 5px
+    height: 0
+    transition: height 2.5s ease-out
+    position: relative
+    &:hover
+        opacity: 0.8
+
+.day figcaption
+    font-size: 15px    
+    color: $Mediumbrown
+    text-align: center
+    margin-top: 8px
+
+// Amount popup    
+.bar::after 
+    content: attr(data-amount)
+    display: block
+    position: absolute
+    background-color: black
+    color: $Cardwhite
+    border-radius: 5px
+    height: 40px
+    padding: 0 10px
+    text-align: center
+    line-height: 40px
+    font-size: 18px
+    left: 50%
+    bottom: calc(100% + 8px)
+    transform: translate(-50%) scale(0)
+    transition: transform ease-out 150ms
+.bar:hover::after 
+    transform: translate(-50%) scale(1) 
+    
+.spending-bottom
+    display: flex
+    align-items: flex-end
+.spending-bottom-left
+    margin-right: 140px
+    p
+        margin-bottom: 1px
+        color: $Mediumbrown
+.p-light
+    color: $Mediumbrown
+
+@media only screen and (max-width: 550px)
+    .popup-wrapper
+        padding-left: calc(8px + 1.5625vw)
+        padding-right: calc(8px + 1.5625vw)
+        
+    h1
+        font-size: 30px
+    h2
+        font-size: 24px
+    p
+        font-size: 15px
+
+    .my-balance
+        border-radius: 10px
+        padding: 20px
+        margin-bottom: 16px
+        p
+            margin-bottom: 4px      
+
+    .spending
+        border-radius: 10px
+        padding: 20px
+        h2
+            margin-bottom: 52px
+    .spending-top
+        margin-bottom: 24px            
+
+    //  Chart section
+    .chart-container
+        gap: 12px
+        margin-bottom: 24px
+        height: 150px
+
+    .day figcaption
+        margin-top: 11px
+        font-size: 12px
+
+    // Amount popup    
+    .bar::after 
+        font-size: 15px
+        border-radius: 3px
+    .spending-bottom-left
+        margin-right: 77px
+        p
+            margin-bottom: 4px
+            color: $Mediumbrown
+
+@media only screen and (max-width: 370px)
+    .spending-bottom-left
+        margin-right: auto
