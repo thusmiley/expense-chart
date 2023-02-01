@@ -26,7 +26,6 @@ h1
     font-size: 48px
 h2
     font-size: 32px    
-
 .my-balance
     background-color: $Softred
     border-radius: 20px
@@ -62,7 +61,7 @@ h2
     justify-content: flex-end
 .bar
     background-color: $Softred
-    width: 100%
+    width: 50px
     border-radius: 5px
     height: 0
     transition: height 2.5s ease-out
@@ -99,18 +98,16 @@ h2
 .spending-bottom
     display: flex
     align-items: flex-end
-.spending-bottom-left
-    margin-right: 140px
-    p
-        margin-bottom: 1px
-        color: $Mediumbrown
+    justify-content: space-between
+.spending-bottom-left p
+    margin-bottom: 1px
+    color: $Mediumbrown
 .p-light
     color: $Mediumbrown
 
 @media only screen and (max-width: 550px)
     .popup-wrapper
-        padding-left: calc(8px + 1.5625vw)
-        padding-right: calc(8px + 1.5625vw)
+        width: 95%
         
     h1
         font-size: 30px
@@ -139,7 +136,8 @@ h2
         gap: 12px
         margin-bottom: 24px
         height: 150px
-
+    .bar
+        width: 100%
     .day figcaption
         margin-top: 11px
         font-size: 12px
@@ -148,12 +146,5 @@ h2
     .bar::after 
         font-size: 15px
         border-radius: 3px
-    .spending-bottom-left
-        margin-right: 77px
-        p
-            margin-bottom: 4px
-            color: $Mediumbrown
-
-@media only screen and (max-width: 370px)
-    .spending-bottom-left
-        margin-right: auto
+    .spending-bottom-left p
+        margin-bottom: 4px
